@@ -199,7 +199,7 @@ void Database::block(string username, string block){
 	}
 	else
 	{
-		string query = "delete from Friend where username = '"+username+"'";
+		string query = "delete from Friend where username ='"+username+"' and friend = '"+block+"'";
 		rc = sqlite3_exec(database, query.c_str(),sqlite3_callback(),0, &zErrMsg);
 		if( rc != SQLITE_OK ){
 			fprintf(stderr, "\n\tSQL error: %s\n", zErrMsg);
