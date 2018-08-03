@@ -1,6 +1,5 @@
 #include "stdafx.h"
 #include "User.h"
-#include <string>
 
 
 User::User(void)
