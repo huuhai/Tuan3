@@ -39,17 +39,17 @@ void Menu::menu2()
 
 void Menu::choice1(){
 	Database database;
-	int chosse1=0;
+	char chosse1;
 	do
 	{
 		system("cls");
 		menu1();
 		cout<<endl<<"\tNhap vao lua chon: ";
 		fflush(stdin);
-		scanf_s("%d", &chosse1);
+		cin>>chosse1;
 		switch (chosse1)
 		{
-		case 1:
+		case '1':
 			if(database.connect()){
 				//fprintf(stdout, "\nOpened database successfully\n");
 				user.dangKy();
@@ -59,7 +59,7 @@ void Menu::choice1(){
 				fprintf(stderr, "\n\tKo the mo database: %s\n");
 			}
 			break;
-		case 2:
+		case '2':
 			system("cls");
 			if(database.connect()){
 				user.nhap();
@@ -70,13 +70,13 @@ void Menu::choice1(){
 				cout <<endl<< "Loi !!!";
 			}
 			break;
-		case 3: cout<<endl<< "Da Thoat !!!"<<endl;
+		case '3': cout<<endl<< "Da Thoat !!!"<<endl;
 			break;
 		default:
 			cout<<endl<< "Chon sai. An mot phim bat ky de chon lai !!!"<<endl;
 			_getch();
 		}
-		if (chosse1==3)
+		if (chosse1=='3')
 		{
 			break;
 		}
@@ -86,7 +86,7 @@ void Menu::choice1(){
 void Menu::choice2(string username, string password)
 {
 	Database database;
-	int chosse2=0;
+	char chosse2;
 	do
 	{
 		system("cls");
@@ -96,7 +96,7 @@ void Menu::choice2(string username, string password)
 		scanf_s("%d", &chosse2);
 		switch (chosse2)
 		{
-		case 1:	
+		case '1':	
 			cout<<endl;
 			if(database.connect()){
 				database.showMessage(username);
@@ -106,7 +106,7 @@ void Menu::choice2(string username, string password)
 				cout <<endl<< "Loi !!!";
 			}
 			break;
-		case 2: 
+		case '2': 
 			if(database.connect()){
 				string receiver="";
 				string content="";
@@ -125,7 +125,7 @@ void Menu::choice2(string username, string password)
 				cout <<endl<< "Loi !!!";
 			}
 			break;
-		case 3:
+		case '3':
 			if(database.connect()){
 				string Friend="";
 				fflush(stdin);
@@ -139,7 +139,7 @@ void Menu::choice2(string username, string password)
 				cout<<endl<<"Loi !!!";
 			}
 			break;
-		case 4: 
+		case '4': 
 			if(database.connect()){
 				database.listFriend(username);
 			}
@@ -148,7 +148,7 @@ void Menu::choice2(string username, string password)
 				cout<<endl<< "Loi !!!";
 			}
 			break;
-		case 5:
+		case '5':
 			if(database.connect()){
 				string block="";
 				fflush(stdin);
@@ -162,7 +162,7 @@ void Menu::choice2(string username, string password)
 				cout<<endl<<"Loi !!!";
 			}
 			break;
-		case 6: 
+		case '6': 
 			if(database.connect()){
 				database.showInfo(username);
 			}
@@ -171,14 +171,14 @@ void Menu::choice2(string username, string password)
 				cout<<endl<<"Loi !!!";
 			}
 			break;
-		case 7: 
+		case '7': 
 			system("cls");
 			break;
 		default:
 			cout<<endl<< "Chon sai. An mot phim bat ky de chon lai !!!"<<endl;
 			_getch();
 		}
-		if (chosse2==7)
+		if (chosse2=='7')
 		{
 			break;
 		}
