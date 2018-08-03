@@ -36,7 +36,7 @@ void Database::signUp(User user)
 			sqlite3_close(database);
 		}
 		else{
-			fprintf(stdout, "\n\t\tThem thanh cong !!!\n");
+			fprintf(stdout, "\n\t\tDang ky thanh cong !!!\n");
 			sqlite3_close(database);
 		}
 	}
@@ -186,7 +186,7 @@ void Database::sendMessage(string sender, string receiver, string content){
 			sqlite3_close(database);
 		}
 		else{
-			fprintf(stdout, "\n\t\tThem thanh cong !!!\n");
+			fprintf(stdout, "\n\t\tGui thanh cong !!!\n");
 			sqlite3_close(database);
 		}
 	}
@@ -207,7 +207,7 @@ void Database::block(string username, string block){
 			sqlite3_close(database);
 		}
 		else{
-			fprintf(stdout, "\n\t\tThem thanh cong !!!\n");
+			fprintf(stdout, "\n\t\tXoa thanh cong !!!\n");
 			sqlite3_close(database);
 		}
 	}

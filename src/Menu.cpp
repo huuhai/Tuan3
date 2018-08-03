@@ -42,7 +42,6 @@ void Menu::choice1(){
 	char chosse1;
 	do
 	{
-		system("cls");
 		menu1();
 		cout<<endl<<"\tNhap vao lua chon: ";
 		fflush(stdin);
@@ -89,7 +88,6 @@ void Menu::choice2(string username, string password)
 	char chosse2;
 	do
 	{
-		system("cls");
 		menu2();
 		cout<<endl<<"\tNhap vao lua chon: ";
 		fflush(stdin);
@@ -154,7 +152,6 @@ void Menu::choice2(string username, string password)
 				fflush(stdin);
 				cout<< "Nhap ten ban be muon block: ";
 				getline(cin, block);
-				fflush(stdin);
 				database.block(username, block);
 			}
 			else
