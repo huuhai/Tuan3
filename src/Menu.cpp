@@ -93,7 +93,7 @@ void Menu::choice2(string username, string password)
 		menu2();
 		cout<<endl<<"\tNhap vao lua chon: ";
 		fflush(stdin);
-		scanf_s("%d", &chosse2);
+		cin>>chosse2;
 		switch (chosse2)
 		{
 		case '1':	
